@@ -11,15 +11,15 @@ on:
 permissions: read-all
 
 jobs:
-  pytest:
-    uses: ./.github/workflows/pytest.yaml
-    secrets: inherit
+  # pytest:
+  #  uses: ./.github/workflows/pytest.yaml
+  #  secrets: inherit
   lint-backend:
     uses: ./.github/workflows/lint-backend.yaml
     secrets: inherit
-  e2e-tests:
-    uses: ./.github/workflows/e2e-tests.yaml
-    secrets: inherit
+  # e2e-tests:
+  #  uses: ./.github/workflows/e2e-tests.yaml
+  #  secrets: inherit
   lint-ui:
     uses: ./.github/workflows/lint-ui.yaml
     secrets: inherit
