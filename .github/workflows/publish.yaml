@@ -21,7 +21,6 @@ jobs:
       BACKEND_DIR: ./backend
     permissions:
       contents: read
-      id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
       - uses: actions/checkout@v4
         with:
@@ -41,5 +40,6 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           packages-dir: backend/dist
+          oidc: false
           username: __token__
           password: ${{ secrets.PYPI_API_TOKEN }}
